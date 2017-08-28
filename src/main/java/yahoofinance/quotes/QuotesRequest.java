@@ -98,7 +98,7 @@ public abstract class QuotesRequest<T> {
             if (line.equals("Missing Symbols List.")) {
                 log.error("The requested symbol was not recognized by Yahoo Finance");
             } else {
-                log.info("Parsing CSV line: " + Utils.unescape(line));
+                log.debug("Parsing CSV line: " + Utils.unescape(line));
 
                 T data = this.parseCSVLine(line);
                 result.add(data);
